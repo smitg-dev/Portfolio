@@ -1,0 +1,126 @@
+:root {
+    --indigo: #1e2358;
+      --indigo-deep: #14183f;
+        --saffron: #f4b63d;
+          --mist: #e8e9f1;
+            --paper: #f7f7fb;
+              --ink: #171a3d;
+                --display: "Bricolage Grotesque", Georgia, sans-serif;
+                  --body: "Instrument Sans", system-ui, sans-serif;
+}
+
+* { box-sizing: border-box; margin: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: var(--body); color: var(--ink); background: var(--paper); line-height: 1.6; }
+:focus-visible { outline: 3px solid var(--saffron); outline-offset: 3px; }
+
+.intro {
+    min-height: 100vh;
+      padding: 2rem clamp(1.25rem, 6vw, 5rem) 4rem;
+        display: flex; flex-direction: column; justify-content: flex-end;
+          color: var(--paper);
+            background:fixed    radial-gradient(circle, rgba(244,182,61,.35) 2px, transparent 2.5px) 0 0 / 34px 34px,
+                radial-gradient(circle, rgba(244,182,61,.18) 2px, transparent 2.5px) 17px 17px / 34px 34px,
+                    var(--indigo);
+                      position: relative;
+}
+.nav { position: absolute; top: 2rem; right: clamp(1.25rem, 6vw, 5rem); display: flex; gap: 1.5rem; }
+.nav a { color: var(--paper); text-decoration: none; border-bottom: 2px solid var(--saffron); padding-bottom: 2px; }
+
+.name {
+    font-family: var(--display); font-weight: 800;
+      font-size: clamp(4.5rem, 21vw, 17rem);
+        line-height: .85; letter-spacing: -.04em;
+          color: var(--saffron);
+            display: flex;
+}
+.name span { display: inline-block; animation: drop .9s cubic-bezier(.2,.9,.3,1.2) both; }
+.surname { font-family: var(--display); font-weight: 800; font-size: clamp(1.8rem, 6vw, 4rem); letter-spacing: -.02em; margin-top: .4rem; }
+@keyframes drop { from { transform: translateY(-60vh) rotate(-8deg); opacity: 0; } }
+
+.lead { max-width: 34rem; font-size: clamp(1.1rem, 2vw, 1.4rem); margin-top: 2rem; }
+.meta { margin-top: 1rem; opacity: .7; font-size: .95rem; }
+
+.about { padding: 6rem clamp(1.25rem, 6vw, 5rem) 2rem; background: var(--mist); }
+.about h2 { font-family: var(--display); font-weight: 800; font-size: clamp(2rem, 5vw, 3.5rem); line-height: 1.05; letter-spacing: -.02em; }
+.card { margin-top: 2.5rem; display: grid; grid-template-columns: 22rem 1fr; gap: 3rem; background: var(--paper); padding: 2rem; border: 3px dashed var(--indigo); border-radius: 2px 40px 2px 40px; }
+.facts { display: grid; gap: 1rem; }
+.facts div { display: grid; grid-template-columns: 5rem 1fr; border-bottom: 1px solid var(--mist); padding-bottom: .6rem; }
+.facts dt { opacity: .65; }
+.facts dd { margin: 0; font-weight: 500; }
+.story p { max-width: 52ch; }
+.story h3 { font-family: var(--display); font-size: 1.4rem; margin: 1.5rem 0 .75rem; }
+.about .tags li { border-color: var(--indigo); }
+
+.work { padding: 6rem clamp(1.25rem, 6vw, 5rem); background: var(--mist); }
+.work h2, .contact h2 {
+    font-family: var(--display); font-weight: 800;
+      font-size: clamp(2rem, 5vw, 3.5rem); line-height: 1.05; letter-spacing: -.02em;
+        max-width: 18ch;
+}
+.panels { display: flex; gap: 12px; height: 26rem; margin-top: 3rem; }
+.panel {
+    flex: 1; min-width: 0; display: flex; overflow: hidden;
+      background: var(--paper); border-radius: 2px 40px 2px 40px;
+        transition: flex .5s cubic-bezier(.3,.8,.3,1), background .3s;
+}
+.panel.open { flex: 6; background: var(--indigo); color: var(--paper); }
+.tab {
+    all: unset; cursor: pointer; flex: 0 0 4.5rem;
+      writing-mode: vertical-rl; transform: rotate(180deg);
+        display: flex; align-items: center; justify-content: flex-end;
+          padding: 1.5rem 0; font-family: var(--display); font-weight: 800; font-size: 1.6rem;
+}
+.panel.open .tab { color: var(--saffron); }
+.tab:focus-visible { outline: 3px solid var(--saffron); outline-offset: -6px; }
+.body { padding: 2rem 2rem 2rem 0; display: none; flex-direction: column; justify-content: flex-end; gap: 1rem; min-width: 18rem; }
+.panel.open .body { display: flex; }
+.body h3 { font-family: var(--display); font-size: 2.2rem; line-height: 1; }
+.body p { max-width: 36ch; }
+.tags { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: .5rem; }
+.tags li { border: 1.5px solid var(--saffron); border-radius: 99px; padding: .15rem .8rem; font-size: .9rem; }
+
+.contact {
+    padding: 6rem clamp(1.25rem, 6vw, 5rem);
+      background: var(--saffron); color: var(--indigo-deep);
+        display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;
+}
+.contact-copy p { margin-top: 1rem; max-width: 34ch; }
+.copy { all: unset; cursor: pointer; margin-top: 1.5rem; font-weight: 500; border-bottom: 2px solid currentColor; }
+.copy:focus-visible { outline: 3px solid var(--indigo); outline-offset: 4px; }
+.status { min-height: 1.6em; font-weight: 500; }
+
+.note {
+    background: var(--paper); padding: 2rem; border-radius: 2px 2px 2px 40px;
+      box-shadow: 10px 10px 0 var(--indigo); transform: rotate(-1.2deg);
+        display: grid; gap: 1.25rem;
+}
+.note label { display: grid; gap: .4rem; font-weight: 500; }
+.note input, .note textarea {
+    font: inherit; padding: .7rem .8rem; border: 2px solid var(--indigo); border-radius: 2px; background: #fff; color: var(--ink);
+}
+.note button {
+    font: inherit; font-weight: 500; cursor: pointer; padding: .85rem 1.2rem;
+      background: var(--indigo); color: var(--paper); border: 0; border-radius: 99px; justify-self: start;
+        transition: background .2s;
+}
+.note button:hover { background: var(--indigo-deep); }
+
+.foot { padding: 1.5rem; text-align: center; background: var(--indigo-deep); color: var(--mist); font-size: .9rem; }
+
+@media (max-width: 800px) {
+    .panels { flex-direction: column; height: auto; }
+      .panel { flex: none; flex-direction: column; }
+        .tab { writing-mode: horizontal-tb; transform: none; flex: none; padding: 1.1rem 1.5rem; justify-content: flex-start; }
+          .body { padding: 0 1.5rem 1.5rem; min-width: 0; }
+            .contact { grid-template-columns: 1fr; gap: 3rem; }
+              .card { grid-template-columns: 1fr; gap: 2rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+      .name span { animation: none; }
+        .panel { transition: none; }
+}
+
+}

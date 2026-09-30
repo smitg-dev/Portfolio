@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dhara Gadhavi | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,800&family=Instrument+Sans:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="intro" id="intro">
+    <nav class="nav" aria-label="Main">
+      <a href="#about">About</a>
+      <a href="#work">Work</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <h1 class="name" aria-label="Dhara Gadhavi"></h1>
+    <p class="surname">Gadhavi</p>
+    <p class="lead">
+      I'm a student curious about how things work, and I like turning ideas into things people can use.
+      This is where I keep my projects.
+    </p>
+    <p class="meta">Student &nbsp;/&nbsp; Age 15 &nbsp;/&nbsp; Always learning</p>
+  </header>
+
+  <main>
+    <section class="about" id="about" aria-labelledby="about-title">
+      <h2 id="about-title">A little about me</h2>
+      <div class="card">
+        <dl class="facts">
+          <div><dt>Name</dt><dd>Dhara Gadhavi</dd></div>
+          <div><dt>Age</dt><dd>15 </dd></div>
+          <div><dt>School</dt><dd>Your school </dd></div>
+          <div><dt>Class</dt><dd>10th grade </dd></div>
+          <div><dt>City</dt><dd>Bardoli </dd></div>
+        </dl>
+        <div class="story">
+          <p>I'm learning how technology works and exploring ideas for useful projects. These details are temporary
+            and can be replaced with Dhara's real story, interests, and goals later.
+          </p>
+          <h3>Interests and skills</h3>
+          <ul class="tags">
+            <li>Coding </li><li>Design </li><li>Reading </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="work" id="work" aria-labelledby="work-title">
+      <h2 id="work-title">Things I have made</h2>
+      <div class="panels">
+
+        <article class="panel open">
+          <button class="tab" aria-expanded="true">Journey to Space</button>
+          <div class="body">
+            <h3>Book Journey to Space</h3>
+            <p>A temporary concept project about booking space travel in the future. It is a place to
+              document what Dhara is learning about web development and building apps from scratch.
+            </p>
+            <ul class="tags"><li>Web development</li><li>In progress</li></ul>
+          </div>
+        </article>
+
+        <article class="panel">
+          <button class="tab" aria-expanded="false">Study planner</button>
+          <div class="body">
+            <h3>Study Planner</h3>
+            <p>To plan which subject i need to do first as per my weakness as per realtime tracking</p>
+            <ul class="tags"><li>Planning</li></ul>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="contact" id="contact" aria-labelledby="contact-title">
+      <div class="contact-copy">
+        <h2 id="contact-title">Want to work on something together?</h2>
+        <p>Tell me your idea and I will get back to you.</p>
+        <button type="button" class="copy" id="copyMail">dhara.gadhavi@gmail.com</button>
+        <p class="status" id="status" role="status"></p>
+      </div>
+
+      <div class="note" id="noteForm">
+        <label>Your name
+          <input id="fName" type="text" autocomplete="name">
+        </label>
+        <label>What are you building?
+          <textarea id="fMsg" rows="4"></textarea>
+        </label>
+        <button type="button" id="send">Send by email</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">Dhara Gadhavi &copy; <span id="year"></span></footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
