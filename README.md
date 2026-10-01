@@ -1,10 +1,10 @@
 Personal Portfolio
 
-Hi. I’m Dhara Gadhavi. I’m a student who enjoys learning how technology works and turning ideas into things people can use.
+Hi, I’m student who enjoys learning how technology works and turning ideas into things people can use.
 
-I created this portfolio to introduce myself and share the projects I’m working on. It also gives me a place to practice web development and try new ideas.
+I created this portfolio to introduce myself and share the projects I’m working on It also gives me a place to practice web development and try new ideas.
 
-The portfolio has an About section where I share some basic information about myself and what I’m currently learning. The Work section shows my projects like Journey to Space and Study Planner. Journey to Space is a concept website about booking space travel in the future. Study Planner is an idea to help students decide what to study based on their progress and weak subjects.
+The portfolio has an About section where I share some basic information about myself and what I’m currently learning the Work section shows my projects like Journey to Space and Study Planner. Journey to Space is a concept website about booking space travel in the future. Study Planner is an idea to help students decide what to study based on their progress and weak subjects.
 
 I also added some simple interactions. Projects can be opened and closed using expandable panels. My name has a small letter-by-letter animation made with JavaScript. The contact section lets visitors copy my email or create a message through their email app.
 
@@ -21,6 +21,4 @@ This portfolio is still a work in progress. I want to add more projects, improve
 For now. this portfolio shows where I am in my learning journey. I’m still learning, but I enjoy building things, making mistakes, fixing them, and trying again.
 
 If you want to get in touch. you can contact me at dhara.gadhavi@gmail.com.
-
-Dhara Gadhavi © 2026
 Always learning. Always building.
